@@ -22,8 +22,12 @@ export default function App() {
 
 /*
 - What is wrong with this code?
+The problem is that the code is mutating the state directly.
 
 - Why might React fail to re-render here?
+React relies on reference changes to detect updates.
+Since the object is mutated and the same reference is passed to
+setUser, React may not trigger a re-render.
 
 - How would you fix it?
 */
